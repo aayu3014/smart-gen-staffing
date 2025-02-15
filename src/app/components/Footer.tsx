@@ -23,7 +23,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full bg-[#FFF4EDBD] py-16 mt-20">
+    <footer className="w-full bg-[#FFF4ED] py-16 mt-20">
       <div className="container mx-auto px-6 md:px-12 lg:px-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Logo and Copyright Column */}
