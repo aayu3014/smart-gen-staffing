@@ -2,10 +2,12 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Eye, EyeOff, LogIn, FacebookIcon } from "lucide-react"; // ✅ Correct imports
+import { Eye, EyeOff, LogIn } from "lucide-react"; // ✅ Correct imports
 
 export default function CreateAccountPage() {
   const [passwordVisible, setPasswordVisible] = useState(false);
+  const [emailPlaceholder, setEmailPlaceholder] = useState("johndoe@mail.com");
+  const [passwordPlaceholder, setPasswordPlaceholder] = useState("********");
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-4">
@@ -26,7 +28,8 @@ export default function CreateAccountPage() {
       </h1>
 
       <p className="text-gray-500 text-sm md:text-base mb-6 text-center">
-        Start your <span className="font-medium">30-day free trial.</span> Cancel anytime.
+        Start your <span className="font-medium">30-day free trial.</span>{" "}
+        Cancel anytime.
       </p>
 
       {/* Social Logins */}
@@ -36,7 +39,8 @@ export default function CreateAccountPage() {
         </button>
 
         <button className="w-full flex items-center justify-center border border-gray-300 bg-white text-black py-3 rounded-lg shadow-sm hover:bg-gray-100 transition">
-          <FacebookIcon className="w-5 h-5 text-blue-600 mr-3" /> Sign up with Facebook
+         Sign up with
+          Facebook
         </button>
       </div>
 
@@ -51,22 +55,23 @@ export default function CreateAccountPage() {
       <div className="w-full max-w-md">
         <label className="block text-sm font-medium text-gray-700">Email</label>
         <input
-  type="email"
-  placeholder="johndoe@mail.com"
-  className="w-full border border-gray-300 rounded-lg px-4 py-3 mt-2 focus:outline-[#A1469E]"
-  onMouseEnter={(e) => (e.target.placeholder = "")} // Remove placeholder on hover
-  onMouseLeave={(e) => (e.target.placeholder = "johndoe@mail.com")} // Restore placeholder when not hovering
-/>
+          type="email"
+          placeholder={emailPlaceholder}
+          className="w-full border border-gray-300 rounded-lg px-4 py-3 mt-2 focus:outline-[#A1469E]"
+          onMouseEnter={() => setEmailPlaceholder("")}
+          onMouseLeave={() => setEmailPlaceholder("johndoe@mail.com")}
+        />
 
-
-        <label className="block text-sm font-medium text-gray-700 mt-4">Password</label>
+        <label className="block text-sm font-medium text-gray-700 mt-4">
+          Password
+        </label>
         <div className="relative">
           <input
             type={passwordVisible ? "text" : "password"}
-            placeholder="********"
+            placeholder={passwordPlaceholder}
             className="w-full border border-gray-300 rounded-lg px-4 py-3 mt-2 pr-10 focus:outline-[#A1469E]"
-            onMouseEnter={(e) => (e.target.placeholder = "")} // Remove placeholder on hover
-            onMouseLeave={(e) => (e.target.placeholder = "********")} // Restore placeholder when not hovering
+            onMouseEnter={() => setPasswordPlaceholder("")}
+            onMouseLeave={() => setPasswordPlaceholder("********")}
           />
           <button
             type="button"
@@ -86,7 +91,10 @@ export default function CreateAccountPage() {
       {/* Already have an account */}
       <p className="text-gray-600 text-sm mt-4">
         Already have an account?{" "}
-        <Link href="/login" className="text-[#A1469E] font-medium hover:underline">
+        <Link
+          href="/login"
+          className="text-[#A1469E] font-medium hover:underline"
+        >
           Log in
         </Link>
       </p>

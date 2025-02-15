@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image"; // ✅ Import Next.js Image component
 
 export default function CandidateSearch() {
   return (
@@ -10,16 +11,16 @@ export default function CandidateSearch() {
         <div className="md:w-1/2 flex items-center justify-center relative">
           <div className="flex items-center gap-3">
             <div className="w-32 h-32 rounded-full border-4 border-white shadow-lg overflow-hidden">
-              <img src="/images/candidate1.jpg" alt="Candidate 1" className="w-full h-full object-cover" />
+              <Image src="/images/candidate1.jpg" alt="Candidate 1" width={128} height={128} className="object-cover" />
             </div>
             <div className="w-24 h-24 rounded-full border-4 border-[#F4A261] shadow-lg overflow-hidden">
-              <img src="/images/candidate2.jpg" alt="Candidate 2" className="w-full h-full object-cover" />
+              <Image src="/images/candidate2.jpg" alt="Candidate 2" width={96} height={96} className="object-cover" />
             </div>
             <div className="w-20 h-20 rounded-full border-4 border-white shadow-lg overflow-hidden">
-              <img src="/images/candidate3.jpg" alt="Candidate 3" className="w-full h-full object-cover" />
+              <Image src="/images/candidate3.jpg" alt="Candidate 3" width={80} height={80} className="object-cover" />
             </div>
             <div className="w-16 h-16 rounded-full border-4 border-white shadow-lg overflow-hidden">
-              <img src="/images/candidate4.jpg" alt="Candidate 4" className="w-full h-full object-cover" />
+              <Image src="/images/candidate4.jpg" alt="Candidate 4" width={64} height={64} className="object-cover" />
             </div>
           </div>
         </div>

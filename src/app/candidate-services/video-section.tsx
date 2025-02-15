@@ -69,14 +69,7 @@ export default function VideoSection() {
               border-blue-500
             "
           >
-            {/* 
-              Put your actual video/image here. For example:
-              <img
-                src="/path/to/video-thumbnail.jpg"
-                alt="Video preview"
-                className="w-full h-full object-cover rounded-xl"
-              />
-            */}
+            
           </div>
         </div>
       </div>

@@ -9,10 +9,10 @@ import {
 
 export default function ContactForm() {
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    // Handle form submission logic here
-  };
+  // const handleSubmit = (e: any) => {
+  //   e.preventDefault();
+  //   // Handle form submission logic here
+  // };
 
   return (
     <div className="min-h-screen bg-white text-gray-800 p-4 md:p-8">

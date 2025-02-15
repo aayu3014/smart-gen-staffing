@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image"; // ✅ Import Next.js Image component
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,8 +13,6 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
-  // A small helper to check if the current route starts with a given path
-  // so we can highlight subroutes as well, e.g. "/candidate-services/..."
   const isActive = (href: string) => {
     return pathname === href || pathname.startsWith(href);
   };
@@ -25,10 +24,12 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/">
-              <img
-                src="/logo.png"
+              <Image
+                src="/logo.png" // ✅ Ensure the logo is inside the public/ folder
                 alt="Smart Gen Staffing"
-                className="h-12 w-auto cursor-pointer"
+                width={150} // ✅ Set width
+                height={50} // ✅ Set height
+                className="cursor-pointer"
               />
             </Link>
           </div>

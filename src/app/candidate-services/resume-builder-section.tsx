@@ -19,14 +19,7 @@ export default function ResumeBuilderSection() {
         <div className="flex flex-col md:flex-row gap-8">
           {/* Left side: placeholder or image */}
           <div className="md:w-1/2 w-full h-64 rounded bg-gray-300" />
-          {/* 
-            Replace above <div> with an <img> if needed:
-            <img 
-              src="/path/to/your.png" 
-              alt="Resume Builder" 
-              className="md:w-1/2 w-full h-auto rounded"
-            />
-          */}
+         
 
           {/* Right side: heading and paragraph */}
           <div className="md:w-1/2 w-full">

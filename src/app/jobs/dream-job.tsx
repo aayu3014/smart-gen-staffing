@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 
 export default function DreamJobHero() {
@@ -44,7 +45,7 @@ export default function DreamJobHero() {
 
         {/* Right Column: Image */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
-          <img
+          <Image
             src="all-job.png"
             alt="Man working on laptop"
             className="max-w-full h-auto"

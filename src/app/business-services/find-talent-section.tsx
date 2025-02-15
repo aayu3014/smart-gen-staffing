@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image"; // ✅ Import Next.js Image component
 
 export default function FindTalentSection() {
   return (
@@ -21,9 +22,11 @@ export default function FindTalentSection() {
 
         {/* Right Side: Illustration */}
         <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
-          <img
-            src="aa.png" // Update this path
+          <Image
+            src="/images/aa.png" // ✅ Make sure the image is inside the public/images folder
             alt="Talent Search Illustration"
+            width={500} // Set appropriate width
+            height={400} // Set appropriate height
             className="max-w-full h-auto"
           />
         </div>

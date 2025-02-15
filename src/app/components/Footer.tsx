@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image"; // ✅ Import Next.js Image component
 
 const Footer = () => {
   const footerLinks = {
@@ -28,13 +29,15 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Logo and Copyright Column */}
           <div className="md:col-span-3">
-            <img
-              src="/logo.png"
+            <Image
+              src="/logo.png" // ✅ Ensure logo is inside public/ folder
               alt="Smart Gen Staffing"
-              className="h-12 w-auto mb-4"
+              width={150} // ✅ Set width
+              height={50} // ✅ Set height
+              className="mb-4"
             />
             <p className="text-sm text-gray-600">
-              © 2024 Smart gen staffing.
+              © 2024 Smart Gen Staffing.
               <br />
               All rights reserved.
             </p>
