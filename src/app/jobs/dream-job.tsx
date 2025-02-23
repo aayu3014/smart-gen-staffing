@@ -1,21 +1,12 @@
-"use client";
+"use client"; // Ensures this component runs only on the client
+
 import Image from "next/image";
 import React from "react";
 
 export default function DreamJobHero() {
   return (
     <section
-      className="
-        w-full
-     
-        bg-[radial-gradient(circle_at_center,_#A1469E_0%,_#7B2A6F_100%)]
-        text-white
-        px-8
-        py-8
-        flex
-        items-center
-        justify-center
-      "
+      className="w-full bg-[radial-gradient(circle_at_center,#A1469E_0%,#7B2A6F_100%)] text-white px-8 py-8 flex items-center justify-center"
     >
       {/* Centered container */}
       <div className="max-w-4xl w-full flex flex-col md:flex-row items-center justify-between">
@@ -29,15 +20,7 @@ export default function DreamJobHero() {
             Thousands of opportunities at your fingertips
           </p>
           <button
-            className="
-              bg-white 
-              text-[#A1469E]
-              px-6 
-              py-3 
-              rounded 
-              font-semibold 
-              hover:opacity-90
-            "
+            className="bg-white text-[#A1469E] px-6 py-3 rounded font-semibold hover:opacity-90 transition"
           >
             Search Jobs
           </button>
@@ -46,9 +29,11 @@ export default function DreamJobHero() {
         {/* Right Column: Image */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <Image
-            src="all-job.png"
+            src="/candidate1.png" // Ensure this image is inside the `public/` folder
             alt="Man working on laptop"
-            className="max-w-full h-auto"
+            width={400} // Required in Next.js Image component
+            height={300} // Required in Next.js Image component
+            priority // Optimizes loading
           />
         </div>
       </div>

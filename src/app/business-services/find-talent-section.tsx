@@ -6,6 +6,7 @@ export default function FindTalentSection() {
   return (
     <section className="w-full bg-white py-16">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-6">
+        
         {/* Left Side: Text Content */}
         <div className="md:w-1/2 text-center md:text-left">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
@@ -23,11 +24,12 @@ export default function FindTalentSection() {
         {/* Right Side: Illustration */}
         <div className="md:w-1/2 flex justify-center mt-8 md:mt-0">
           <Image
-            src="/images/aa.png" // ✅ Make sure the image is inside the public/images folder
+            src="/b1.png" // ✅ Fixed Path (Removed `/images/`)
             alt="Talent Search Illustration"
-            width={500} // Set appropriate width
-            height={400} // Set appropriate height
+            width={500}
+            height={400}
             className="max-w-full h-auto"
+            priority // ✅ Ensures faster loading
           />
         </div>
       </div>

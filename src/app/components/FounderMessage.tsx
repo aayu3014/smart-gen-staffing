@@ -11,10 +11,7 @@ const FounderMessage = () => {
 
         {/* Description */}
         <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
-          Smart Gen Staffing has been an invaluable partner in our growth
-          journey. Their team&apos;s expertise, responsiveness, and ability to
-          identify the right candidates have been instrumental in building our
-          high-performing workforce
+        At SmartGenStaffing, we’re here to be your trusted partner in growth. Your success is our mission, and we’re committed to supporting your journey every step of the way.
         </p>
 
         {/* Cards Container */}

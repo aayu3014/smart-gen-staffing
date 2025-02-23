@@ -11,10 +11,7 @@ const HeroSection = () => {
             Smart Gen Staffing - Connecting Talent with Opportunity
           </h1>
           <p className="text-gray-600 mb-8 max-w-xl">
-            At Smart Gen Staffing, we understand the importance of finding the
-            right fit between employers and job seekers. Our experienced team
-            works tirelessly to match qualified candidates with rewarding career
-            opportunities, tailored to their unique skills and aspirations.
+          At SmartGenStaffing, we’re here to be your trusted partner in growth. Your success is our mission, and we’re committed to supporting your journey every step of the way.
           </p>
           <div className="flex gap-4">
             <button className="bg-[#9B4B9C] text-white px-8 py-3 rounded-lg">
